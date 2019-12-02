@@ -3,6 +3,7 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
+from kivy.uix.image import AsyncImage
 import json
 import requests
 
@@ -26,14 +27,13 @@ class TelaInicial(BoxLayout):
 
     def print_user(self):
         parsed = self.get_user(self.ids.entrada.text)
-        text_label = [parsed.get("name"), parsed.get("login"), parsed.get("id"), parsed.get("bio")]
+        text_label = [parsed.get("name"), parsed.get("login"),  parsed.get("avatar_url"), parsed.get("bio")]
 
-        lb = Label(text="Teste de label")
+        avatar = AsyncImage(source=text_label[2])
+        self.ids.grid_label.add_widget(avatar)
+
+        lb = Label(text="Nome: " + text_label[0] + " \nBiografia: " + text_label[3])
         self.ids.grid_label.add_widget(lb)
-
-        print(text_label)
-
-
 
 class SearchGitHub(App):
     def build(self):
