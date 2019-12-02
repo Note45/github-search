@@ -1,0 +1,49 @@
+<TelaInicial@BoxLayout>:
+    BoxLayout:
+        id: tela
+
+        BoxLayout:
+            canvas:
+                Color:
+                    rgba: 150/255, 150/255, 150/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            ScrollView:
+                id: scrlv
+
+                GridLayout:
+                    id: grid_label
+
+                    cols: 1
+                    size_hint_y: None
+                    height: max(self.minimum_height, scrlv.height)
+
+                    BoxLayout:
+                        size_hint_y: None
+                        height: sized_label.height
+                        Label:
+                            id: sized_label
+                            text: "Digite um Usuário:"
+                            size_hint: (None, None)
+                            markup: True
+                            size: self.texture_size
+                        Label:
+
+                    TextInput:
+                        id: entrada
+                        size_hint_y: None
+                        pos_hint: {"top": 0}
+                        height: 40
+                        hint_text: 'Enter Text Here'
+
+                    Button:
+                        size_hint_y: None
+                        height: 40
+                        text: 'Pesquisar'
+                        on_press: root.print_user()
+
+                    Label:
+                        size_hint_y: None
+                        height: 5
