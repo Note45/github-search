@@ -1,7 +1,7 @@
 # GitHub Search
 <p>O projeto Github Search tem como objetivo ser um ambiente de estudo para Python em conjunto com a biblioteca Kivy. O projeto se utiliza da API do GitHub para realizar requisições afim de obter e tratar dados.<p>
 
-## Dependencias
+## Dependências
   <ul>
     <li>Python 3.6</li>
     <li>Kivy 1.9.1</li>
