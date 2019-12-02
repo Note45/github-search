@@ -7,7 +7,6 @@
     <li>Kivy 1.9.1</li>
   </ul>
   <p>OBS: Se você tiver vesões mais atuais do que as citadas acima, não é necessário realizar a instalação das dependências.</p>
-<hr></hr>
 
 ## Licença
 <p>Atualmente o projeto se encontra sobre a licença GPL-3.0, é recomendado que você que deseja modificar o projeto olhe o que a licença permite e sobretudo o que não é permitido fazer com o código contido nesse repositório</p>
