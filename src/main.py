@@ -32,7 +32,7 @@ class TelaInicial(BoxLayout):
         avatar = AsyncImage(source=text_label[2])
         self.ids.grid_label.add_widget(avatar)
 
-        lb = Label(text="Nome: " + text_label[0] + " \nBiografia: " + text_label[3])
+        lb = Label(text="Nome: " + text_label[0] + "\nUsuário: " + text_label[1] + " \nBio: " + text_label[3])
         self.ids.grid_label.add_widget(lb)
 
 class SearchGitHub(App):
